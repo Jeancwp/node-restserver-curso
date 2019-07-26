@@ -18,6 +18,6 @@ let urlDB;
 if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/menu';
 } else {
-    urlDB = 'mongodb+srv://jeancwp:Jeanclaude100@cluster0-qe8wd.mongodb.net/menu';
+    urlDB = process.env.MONGO_URI;
 }
 process.env.URLDB = urlDB;
